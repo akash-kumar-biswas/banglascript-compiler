@@ -1,6 +1,6 @@
-# BanglaScript Compiler
+# Chandrabindu Compiler
 
-A statically typed, interpreted programming language with **Bangla (Romanized Bengali) keywords**, built using Flex, Bison, and C. Developed as a Compiler Design course project, BanglaScript implements a complete compiler pipeline — lexical analysis, syntax analysis, semantic checking, intermediate code generation, and tree-walk interpretation.
+A statically typed, interpreted programming language with **Bangla (Romanized Bengali) keywords**, built using Flex, Bison, and C. Developed as a Compiler Design course project, Chandrabindu implements a complete compiler pipeline — lexical analysis, syntax analysis, semantic checking, intermediate code generation, and tree-walk interpretation.
 
 ---
 
@@ -31,7 +31,7 @@ A statically typed, interpreted programming language with **Bangla (Romanized Be
 
 ## Overview
 
-BanglaScript programs are written in `.bs` source files. The compiler reads a source file, tokenizes it, parses it into an AST, validates semantics, generates TAC-like intermediate code, and executes the program by walking the AST.
+Chandrabindu programs are written in `.bs` source files. The compiler reads a source file, tokenizes it, parses it into an AST, validates semantics, generates TAC-like intermediate code, and executes the program by walking the AST.
 
 - Output is written to both the **terminal** and `output.txt` simultaneously
 - Intermediate representation is written to `intermediate.txt` after every successful parse
@@ -86,8 +86,8 @@ sudo apt install gcc flex bison make
 ## Build Instructions
 
 ```bash
-git clone https://github.com/<your-username>/banglascript-compiler.git
-cd banglascript-compiler
+git clone https://github.com/<your-username>/chandrabindu-compiler.git
+cd chandrabindu-compiler
 make
 ```
 
@@ -475,13 +475,13 @@ Tuesday
 ## Project Structure
 
 ```
-banglascript-compiler/
+chandrabindu-compiler/
 ├── lexer.l              # Flex lexer — tokenizes source, handles comments
 ├── parser.y             # Bison parser — AST, semantic checks, interpreter, IR generator
 ├── main.c               # Entry point — orchestrates the full compiler pipeline
 ├── Makefile             # Build automation
 │
-├── input.bs             # Sample BanglaScript program
+├── input.bs             # Sample Chandrabindu program
 ├── output.txt           # Program output (generated at runtime)
 ├── intermediate.txt     # TAC-like intermediate code (generated at runtime)
 │
