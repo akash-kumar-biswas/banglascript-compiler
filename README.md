@@ -95,7 +95,7 @@ The build pipeline runs in order:
 
 1. `bison -d parser.y` → generates `parser.tab.c` and `parser.tab.h`
 2. `flex lexer.l` → generates `lex.yy.c`
-3. `gcc -Wall -Wno-unused-function -g lex.yy.c parser.tab.c main.c -o compiler -lm`
+3. `gcc -Wall -Wno-unused-function -g lex.yy.c parser.tab.c main.c -o chandrabindu -lm`
 
 ```bash
 make clean    # Remove all generated files
@@ -106,13 +106,13 @@ make clean    # Remove all generated files
 ## Usage
 
 ```bash
-./compiler <source_file.bs>
+./chandrabindu <source_file.bs>
 ```
 
 **Example:**
 
 ```bash
-./compiler input.bs
+./chandrabindu input.bs
 ```
 
 After running:
@@ -491,7 +491,7 @@ chandrabindu-compiler/
     └── semantic_error.bs # Semantic error test
 ```
 
-> `lex.yy.c`, `parser.tab.c`, `parser.tab.h`, and `compiler`/`compiler.exe` are generated at build time and not committed to the repository.
+> `lex.yy.c`, `parser.tab.c`, `parser.tab.h`, and `chandrabindu`/`chandrabindu.exe` are generated at build time and not committed to the repository.
 
 ---
 
